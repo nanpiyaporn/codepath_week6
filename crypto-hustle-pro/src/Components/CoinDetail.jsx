@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react"; //component out
 import { useParams } from "react-router-dom";
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
 
