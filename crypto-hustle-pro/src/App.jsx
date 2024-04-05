@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import CoinInfo from './Components/CoinInfo';
 import './App.css';
 
+
 function App() {
+ 
   const API_KEY = import.meta.env.VITE_APP_API_KEY;
   const [list, setList] = useState(null);
   const [filteredResults, setFilteredResults] = useState([]);
