@@ -26,13 +26,7 @@ const CoinInfo = ({ image, name, symbol }) => {
 
   return (
     <>
-    <Link
-  style={{ color: "White" }}
-  to={`/coinDetails/${symbol}`}
-  key={symbol}
->
-  {name} <span className="tab"></span> ${price.USD} USD
-</Link>
+    
     <div> 
       {price ?(
         <li className="main-list" key={symbol}>
@@ -41,7 +35,13 @@ const CoinInfo = ({ image, name, symbol }) => {
         src={`https://www.cryptocompare.com${image}`}
         alt={`Small icon for ${name} crypto coin`}
       />
-         
+         <Link
+  style={{ color: "White" }}
+  to={`/coinDetails/${symbol}`}
+  key={symbol}
+>
+  {name} <span className="tab"></span> ${price.USD} USD
+</Link>
        {name} <span className="tab"></span> ${price.USD}
        </li>
       ) : null}
