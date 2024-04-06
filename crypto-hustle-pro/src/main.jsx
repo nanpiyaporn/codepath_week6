@@ -15,6 +15,17 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path ="/" element={<Layout />}>
           <Route index={true} path="/" element={<App />} />
           <Route index={false} path="/coinDetails/:symbol" element={<DetailView />} />
+          <Route
+  path="*"
+  element={
+    <main style={{ padding: "1rem" }}>
+      <p>There's nothing here!</p>
+      <Link style={{ color: "white" }} to="/">
+        Back to Home
+      </Link>
+    </main>
+  }
+/>
           </Route>  
         </Routes>
     </BrowserRouter>

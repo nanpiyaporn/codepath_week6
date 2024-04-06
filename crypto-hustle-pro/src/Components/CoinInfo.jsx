@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
 
@@ -24,6 +25,14 @@ const CoinInfo = ({ image, name, symbol }) => {
   }, [symbol]);
 
   return (
+    <>
+    <Link
+  style={{ color: "White" }}
+  to={`/coinDetails/${symbol}`}
+  key={symbol}
+>
+  {name} <span className="tab"></span> ${price.USD} USD
+</Link>
     <div> 
       {price ?(
         <li className="main-list" key={symbol}>
@@ -37,6 +46,7 @@ const CoinInfo = ({ image, name, symbol }) => {
        </li>
       ) : null}
   </div>
+  </>
   );
 };
 
