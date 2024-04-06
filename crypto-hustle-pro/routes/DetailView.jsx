@@ -1,4 +1,4 @@
-import CoinDetail from "./src/Components/coinDetail";
+import CoinDetail from ".src/Components/coinDetail";
 
 const DetailView = () => {
   return (
