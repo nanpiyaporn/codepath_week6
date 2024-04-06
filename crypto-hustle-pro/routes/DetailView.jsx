@@ -1,8 +1,11 @@
-import CoinDetail from './Components/CoinDetail';
+import CoinDetail from "../Components/coinDetail";
 
 const DetailView = () => {
   return (
-    <CoinDetail />
+    <div>
+      
+      <CoinDetail />
+    </div>
   );
 };
 
